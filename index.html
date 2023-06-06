@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+</html>
+<style>
+    body{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 200px;
+        background-color: rgb(35, 34, 34);
+    }
+    .time-box{
+     display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        border:2px solid black;
+        height:250px;
+        width:500px;
+        font-size: 80PX;
+        color: rgb(221, 134, 29);
+        font-family: 'Noto Sans', sans-serif;
+        text-shadow:0px 0px 8px ;
+        background-color: rgb(19, 19, 19);
+
+    }
+    p{
+        margin: 0px;
+    }
+    .time-box::before{
+        content:"";
+        position:absolute;
+        height:calc(258px);
+        width:calc(508px);
+        background:linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+        z-index: -1;
+        animation-name: shadow;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        background-size:400%;
+        filter: blur(10px);
+        }
+@keyframes shadow{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 100% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+.day{
+    font-size: 30px;
+    color: rgb(0, 242, 255);
+}
+
+</style>
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen and (max-width:1000px)"  href="phone.css">
+    <div class="time-box"><p class="hms"></p><p class="day"></p></div>
+    <script src="script.js"></script>
+</body>
